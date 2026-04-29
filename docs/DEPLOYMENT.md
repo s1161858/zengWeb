@@ -2,21 +2,21 @@
 
 ## 1. 创建 GitHub 仓库
 
-在 GitHub 创建一个新仓库。推荐仓库名：
+在 GitHub 用户 `s1161858` 下创建一个新仓库。推荐仓库名：
 
-- 个人主页仓库：`你的GitHub用户名.github.io`
+- 个人主页仓库：`s1161858.github.io`
 - 普通项目仓库：任意名称，例如 `personal-website`
 
-如果仓库名是 `你的GitHub用户名.github.io`，发布地址会是：
+如果仓库名是 `s1161858.github.io`，发布地址会是：
 
 ```text
-https://你的GitHub用户名.github.io/
+https://s1161858.github.io/
 ```
 
 如果仓库名是普通项目名，发布地址通常是：
 
 ```text
-https://你的GitHub用户名.github.io/仓库名/
+https://s1161858.github.io/仓库名/
 ```
 
 ## 2. 推送代码
@@ -28,7 +28,7 @@ git init
 git add .
 git commit -m "Initial personal website"
 git branch -M main
-git remote add origin https://github.com/你的GitHub用户名/仓库名.git
+git remote add origin https://github.com/s1161858/仓库名.git
 git push -u origin main
 ```
 

@@ -1,43 +1,113 @@
 [
   {
-    "title": "项目名称示例",
-    "type": "Web",
+    "title": "K12 Mathematics Multimodal Teaching Agent",
+    "type": "LLM",
+    "status": "research",
+    "featured": true,
+    "summary": "A Qwen fine-tuned teaching agent for K12 mathematics. It combines instruction tuning, Socratic dialogue, chain-of-thought guided decomposition, OCR and semantic understanding for image-text questions.",
+    "tags": ["Qwen", "SFT", "OCR", "Education"],
+    "links": [
+      {
+        "label": "项目资料位置",
+        "url": "projects/k12-math-agent/README.md"
+      }
+    ]
+  },
+  {
+    "title": "English AI Oral Coaching System",
+    "type": "Speech",
     "status": "building",
     "featured": true,
-    "summary": "用两三句话说明项目解决了什么问题、你的职责是什么、最终产出是什么。",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "summary": "An oral practice system based on Whisper, GenAI and Kokoro TTS. It uses LoRA for accent adaptation, SFT for professional feedback generation and GPU cluster deployment for real-time scoring.",
+    "tags": ["Whisper", "LoRA", "TTS", "Slurm"],
     "links": [
       {
-        "label": "代码",
-        "url": "https://github.com/your-github-name/project"
+        "label": "项目资料位置",
+        "url": "projects/english-oral-coach/README.md"
       }
     ]
   },
   {
-    "title": "AI 应用示例",
-    "type": "AI",
+    "title": "Educational RAG Agent",
+    "type": "Agent",
+    "status": "building",
+    "featured": false,
+    "summary": "A retrieval-augmented intelligent agent for education scenarios, designed to connect private knowledge, teaching logic and interactive question-answering flows.",
+    "tags": ["RAG", "Agent", "Education"],
+    "links": [
+      {
+        "label": "项目资料位置",
+        "url": "projects/education-rag-agent/README.md"
+      }
+    ]
+  },
+  {
+    "title": "AI Teaching Platform",
+    "type": "Platform",
+    "status": "building",
+    "featured": false,
+    "summary": "A platform concept that connects school teachers, tutors and students. Work includes fine-tuning setup, frontend/backend integration and application scenario design.",
+    "tags": ["Full Stack", "FT", "Product"],
+    "links": [
+      {
+        "label": "项目资料位置",
+        "url": "projects/ai-teaching-platform/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Booster K1 Robot Web Control",
+    "type": "Robotics",
+    "status": "building",
+    "featured": false,
+    "summary": "A distributed control architecture based on the Booster K1 robot SDK, including web remote control, motion planning and playback, multimodal interaction and communication protocol integration.",
+    "tags": ["Robot SDK", "Web Control", "API"],
+    "links": [
+      {
+        "label": "项目资料位置",
+        "url": "projects/booster-k1-control/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Time-Series Event Modeling Research Replication",
+    "type": "Data",
+    "status": "research",
+    "featured": false,
+    "summary": "Data engineering and deep learning framework replication for multi-source heterogeneous datasets, including time series, event labels and covariate features across public datasets.",
+    "tags": ["SHPP", "RMTPP", "THP"],
+    "links": [
+      {
+        "label": "项目资料位置",
+        "url": "projects/time-series-event-modeling/README.md"
+      }
+    ]
+  },
+  {
+    "title": "AI + Hybrid Semantic Network Vocabulary Paper",
+    "type": "Research",
+    "status": "research",
+    "featured": false,
+    "summary": "A paper under review on using the synergy of artificial intelligence and hybrid semantic networks to support long-term and efficient mastery of college English vocabulary.",
+    "tags": ["Paper", "Semantic Network", "AI"],
+    "links": [
+      {
+        "label": "项目资料位置",
+        "url": "projects/vocabulary-semantic-network/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Huawei ICT Competition 2025-2026",
+    "type": "Competition",
     "status": "live",
     "featured": false,
-    "summary": "说明模型、数据、交互流程、部署方式和你负责的关键模块。",
-    "tags": ["Python", "API", "Product"],
+    "summary": "Represented EdUHK in the Huawei ICT Competition Hong Kong SAR, winning first place in the Group AI category and fourth place in the Cloud category.",
+    "tags": ["AI", "Cloud", "Award"],
     "links": [
       {
-        "label": "说明",
-        "url": "https://github.com/your-github-name"
-      }
-    ]
-  },
-  {
-    "title": "数据分析示例",
-    "type": "Data",
-    "status": "archived",
-    "featured": false,
-    "summary": "说明数据来源、分析方法、可视化结果和项目带来的结论。",
-    "tags": ["Notebook", "Chart", "Report"],
-    "links": [
-      {
-        "label": "报告",
-        "url": "https://github.com/your-github-name"
+        "label": "项目资料位置",
+        "url": "projects/huawei-ict-competition/README.md"
       }
     ]
   }

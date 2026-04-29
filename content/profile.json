@@ -1,28 +1,80 @@
 {
-  "name": "你的名字",
-  "role": "个人网站 / 项目档案",
-  "location": "中国 / 可远程协作",
-  "focus": "软件开发、AI 应用、数据项目",
-  "status": "持续更新作品集",
-  "summary": "这里可以放你的个人介绍、作品集、项目复盘、论文/文章和联系方式。先部署到 GitHub Pages，之后绑定个人域名。",
+  "name": "ZENG Chen bo",
+  "role": "AI Application Developer / Large Model Engineer",
+  "location": "Tai Po District, Hong Kong",
+  "focus": "LLM Fine-tuning · RAG · Multimodal AI",
+  "status": "Open to AI engineering and research collaboration",
+  "summary": "MSc AI student at The Education University of Hong Kong, focused on LLM fine-tuning, multimodal teaching agents, RAG systems, speech AI and robot interaction platforms.",
   "about": [
-    "这里是你的个人介绍。建议写清楚你是谁、正在做什么、擅长什么、希望别人如何与你合作。",
-    "你可以把更完整的经历、技能栈、教育背景或工作经历继续拆到 content 目录下维护。"
+    "I work across the full AI application chain: data construction, model fine-tuning, agent architecture, multimodal input, deployment and product interaction.",
+    "My recent work includes Qwen-based K12 mathematics teaching agents, Whisper + LLM + TTS oral coaching, RAG educational agents, AI teaching platforms and web-controlled robot interaction systems."
   ],
   "contacts": [
     {
       "label": "GitHub",
-      "url": "https://github.com/your-github-name"
+      "url": "https://github.com/s1161858"
     },
     {
       "label": "Email",
-      "url": "mailto:your-email@example.com"
+      "url": "mailto:s1161858@s.eduhk.hk"
+    },
+    {
+      "label": "Resume PDF",
+      "url": "assets/documents/CV-ZENG-Chen-bo.pdf"
     }
   ],
-  "notes": [
+  "skills": [
     {
-      "date": "2026-04-29",
-      "text": "创建个人网站初版结构，支持 GitHub Pages 部署。"
+      "icon": "LLM",
+      "title": "Large Model Engineering",
+      "text": "Instruction tuning, LoRA/SFT, Qwen-based domain modeling, chain-of-thought guided dialogue."
+    },
+    {
+      "icon": "RAG",
+      "title": "Agent Systems",
+      "text": "Retrieval-augmented agents, educational workflows, multi-turn tutoring and product integration."
+    },
+    {
+      "icon": "MM",
+      "title": "Multimodal AI",
+      "text": "OCR + semantic parsing, speech recognition, TTS, image-text question understanding."
+    },
+    {
+      "icon": "GPU",
+      "title": "Deployment",
+      "text": "End-to-end deployment on GPU clusters, Slurm workflows, API and platform client integration."
+    }
+  ],
+  "experience": [
+    {
+      "period": "2025-2026",
+      "title": "MSc in Artificial Intelligence for Executive Professional",
+      "org": "The Education University of Hong Kong",
+      "text": "Coursework includes data science, AI, spatial intelligence, agent development, chatbot integration, LLM fine-tuning, knowledge distillation, reinforcement learning, R and Python."
+    },
+    {
+      "period": "2025-2026",
+      "title": "Student Assistant, Data Science Direction",
+      "org": "EdUHK, supervised by Prof. Ling Man Ho Alpha",
+      "text": "Collected and integrated multi-source heterogeneous datasets and replicated deep-learning event/time-series frameworks including SHPP, RMTPP and THP."
+    },
+    {
+      "period": "2025-2026",
+      "title": "AI Application Development and Large Model Engineer",
+      "org": "EdUHK AIDCEC Team",
+      "text": "Built Qwen fine-tuned mathematics teaching agents and an English AI oral coaching system based on Whisper, GenAI and Kokoro TTS."
+    },
+    {
+      "period": "2025-2026",
+      "title": "AI Application Development and Large Model Engineer",
+      "org": "5Gnu MultiMedia Limited (HK)",
+      "text": "Worked on RAG agents, AI teaching platform integration and Booster K1 robot SDK based distributed control."
+    },
+    {
+      "period": "2025-2026",
+      "title": "Huawei ICT Competition Hong Kong SAR",
+      "org": "EdUHK Team",
+      "text": "Won first place in the Group AI category and ranked fourth in the Cloud category."
     }
   ]
 }
