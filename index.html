@@ -15,8 +15,11 @@
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="回到首页">
-        <span class="brand-mark" aria-hidden="true">ZC</span>
-        <span data-profile="name">ZENG Chen bo</span>
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>
+          <strong data-profile="englishName">Magcial</strong>
+          <small data-profile="name">ZENG Chen bo</small>
+        </span>
       </a>
       <nav class="site-nav" aria-label="主导航">
         <a href="#projects">项目</a>
@@ -29,36 +32,67 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
+        <aside class="profile-card" aria-label="个人资料">
+          <div class="avatar" aria-hidden="true">M</div>
+          <p class="profile-name" data-profile="englishName">Magcial</p>
+          <p class="profile-realname" data-profile="name">ZENG Chen bo</p>
+          <p class="profile-role" data-profile="role">AI Application Developer / Large Model Engineer</p>
+          <dl class="profile-facts">
+            <div>
+              <dt>Location</dt>
+              <dd data-profile="location">Tai Po District, Hong Kong</dd>
+            </div>
+            <div>
+              <dt>GitHub</dt>
+              <dd>@s1161858</dd>
+            </div>
+          </dl>
+          <div class="profile-links">
+            <a href="https://github.com/s1161858" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="mailto:s1161858@s.eduhk.hk">Email</a>
+            <a href="assets/documents/CV-ZENG-Chen-bo.pdf" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+        </aside>
+
         <div class="hero-copy">
-          <p class="eyebrow" data-profile="role">AI Application Developer / Large Model Engineer</p>
+          <p class="eyebrow">Portfolio / AI Engineering</p>
           <h1 id="hero-title">
-            <span data-profile="name">ZENG Chen bo</span>
-            <span class="title-line">Building AI agents that move from research code to usable products.</span>
+            <span data-profile="englishName">Magcial</span>
+            <span class="title-line">Building multimodal AI agents, RAG systems and product-ready teaching platforms.</span>
           </h1>
           <p class="hero-summary" data-profile="summary">
             MSc AI student at The Education University of Hong Kong, focused on LLM fine-tuning,
             multimodal teaching agents, RAG systems, speech AI and robot interaction platforms.
           </p>
+          <div class="hero-tags" aria-label="重点方向">
+            <span>Qwen Fine-tuning</span>
+            <span>RAG Agents</span>
+            <span>Speech AI</span>
+            <span>Robotics</span>
+          </div>
           <div class="hero-actions">
             <a class="button primary" href="#projects">查看项目</a>
             <a class="button secondary" href="assets/documents/CV-ZENG-Chen-bo.pdf" target="_blank" rel="noreferrer">查看简历</a>
           </div>
         </div>
 
-        <aside class="signal-panel" aria-label="个人概览">
-          <div class="signal-screen">
-            <div class="scanline" aria-hidden="true"></div>
-            <p class="screen-label">Current Focus</p>
-            <strong data-profile="focus">LLM Fine-tuning · RAG · Multimodal AI</strong>
-            <span data-profile="status">Open to AI engineering and research collaboration</span>
+        <aside class="activity-card" aria-label="项目活动概览">
+          <div class="terminal-bar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
+          <p class="screen-label">Current Focus</p>
+          <strong data-profile="focus">LLM Fine-tuning · RAG · Multimodal AI</strong>
+          <span class="status-line" data-profile="status">Open to AI engineering and research collaboration</span>
+          <div class="activity-grid" id="activity-grid" aria-hidden="true"></div>
           <dl class="metrics">
             <div>
               <dt>Education</dt>
               <dd>EdUHK MSc AI</dd>
             </div>
             <div>
-              <dt>Competition</dt>
+              <dt>Award</dt>
               <dd>Huawei ICT AI #1 HK</dd>
             </div>
             <div>

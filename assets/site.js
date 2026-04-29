@@ -1,5 +1,6 @@
 const fallbackProfile = {
   name: "ZENG Chen bo",
+  englishName: "Magcial",
   role: "AI Application Developer / Large Model Engineer",
   location: "Tai Po District, Hong Kong",
   focus: "LLM Fine-tuning · RAG · Multimodal AI",
@@ -85,7 +86,7 @@ async function loadJson(path, fallback) {
 }
 
 function setProfileText(profile) {
-  document.title = `${profile.name} | AI Engineer`;
+  document.title = `${profile.englishName || profile.name} | AI Engineer`;
   document.querySelectorAll("[data-profile]").forEach((node) => {
     const key = node.dataset.profile;
     if (profile[key]) node.textContent = profile[key];
@@ -93,13 +94,7 @@ function setProfileText(profile) {
 
   const mark = document.querySelector(".brand-mark");
   if (mark) {
-    mark.textContent = profile.name
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((part) => part[0])
-      .join("")
-      .toUpperCase();
+    mark.textContent = (profile.englishName || profile.name).slice(0, 1).toUpperCase();
   }
 }
 
@@ -229,6 +224,23 @@ function renderProjects(projects, filter = "All") {
   document.querySelector("#project-count").textContent = `${projects.length}+`;
 }
 
+function renderActivityGrid(projects) {
+  const grid = document.querySelector("#activity-grid");
+  grid.innerHTML = "";
+  const source = projects.length ? projects : [{ featured: true }, { featured: false }];
+  const weights = source.flatMap((project, index) => {
+    const base = project.featured ? 4 : 2;
+    return [base, Math.max(1, base - 1), (index % 4) + 1];
+  });
+
+  Array.from({ length: 84 }).forEach((_, index) => {
+    const cell = document.createElement("span");
+    const weight = weights[index % weights.length] || 1;
+    cell.dataset.level = String((weight + index) % 5);
+    grid.append(cell);
+  });
+}
+
 function setupCommandPalette() {
   const overlay = document.querySelector("#command-overlay");
   const open = () => {
@@ -329,6 +341,7 @@ async function init() {
   renderExperience(profile);
   renderFilters(projects, (type) => renderProjects(projects, type));
   renderProjects(projects);
+  renderActivityGrid(projects);
   setupCommandPalette();
   setupCanvas();
   document.querySelector("#year").textContent = new Date().getFullYear();
