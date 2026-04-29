@@ -5,7 +5,7 @@
 ## 目录说明
 
 - `index.html`：网站首页结构。
-- `assets/`：样式、脚本和图片资源。
+- `assets/`：静态资源总目录，按 `css/`、`js/`、`images/`、`documents/` 分类。
 - `content/`：个人信息、项目列表、联系方式等可编辑内容。
 - `projects/`：每个项目的材料文件夹，例如截图、PDF、演示视频、代码说明。
 - `docs/`：部署、域名绑定和维护说明。
@@ -32,3 +32,5 @@ python -m http.server 8000
 ## 部署
 
 先把仓库推送到 GitHub 用户 `s1161858` 下面，再在仓库设置里启用 GitHub Pages。详细步骤见 `docs/DEPLOYMENT.md`。
+
+当前代码仓库：`https://github.com/s1161858/zengWeb`。项目还在完善阶段，暂不要求启用 Pages。
