@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="个人网站与项目档案，用来展示个人介绍、项目经历、文章与联系方式。"
+    />
+    <title>你的名字 | 个人网站</title>
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand-mark" aria-hidden="true">YN</span>
+        <span data-profile="name">你的名字</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#about">关于</a>
+        <a href="#notes">记录</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-profile="role">个人网站 / 项目档案</p>
+          <h1 id="hero-title">
+            <span data-profile="name">你的名字</span>
+            <span class="title-line">把项目、经验和想法整理到一个长期维护的地方。</span>
+          </h1>
+          <p class="hero-summary" data-profile="summary">
+            这里可以放你的个人介绍、作品集、项目复盘、论文/文章和联系方式。先部署到
+            GitHub Pages，之后绑定个人域名。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">查看项目</a>
+            <a class="button secondary" href="#contact">联系我</a>
+          </div>
+        </div>
+
+        <aside class="profile-panel" aria-label="个人信息概览">
+          <img src="assets/profile-portrait.svg" alt="个人头像占位图" />
+          <dl>
+            <div>
+              <dt>定位</dt>
+              <dd data-profile="location">中国 / 可远程协作</dd>
+            </div>
+            <div>
+              <dt>方向</dt>
+              <dd data-profile="focus">软件开发、AI 应用、数据项目</dd>
+            </div>
+            <div>
+              <dt>状态</dt>
+              <dd data-profile="status">持续更新作品集</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">项目展示</h2>
+          <p>
+            每个项目都从 <code>content/projects.json</code> 读取。你可以按类型、状态和链接持续补充。
+          </p>
+        </div>
+        <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section split" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">关于我</h2>
+        </div>
+        <div class="rich-text" id="about-content">
+          <p>
+            这里是你的个人介绍。建议写清楚你是谁、正在做什么、擅长什么、希望别人如何与你合作。
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="notes" aria-labelledby="notes-title">
+        <div class="section-head">
+          <p class="eyebrow">Notes</p>
+          <h2 id="notes-title">更新记录</h2>
+          <p>网站和内容的变更可以写在各目录的 <code>LOG.md</code>，页面内容更新写在这里。</p>
+        </div>
+        <ol class="timeline" id="notes-list">
+          <li>
+            <time datetime="2026-04-29">2026-04-29</time>
+            <span>创建个人网站初版结构，支持 GitHub Pages 部署。</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">联系方式</h2>
+          <p>把邮箱、GitHub、LinkedIn、博客或其他入口写到 <code>content/profile.json</code>。</p>
+        </div>
+        <div class="contact-links" id="contact-links"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> <span data-profile="name">你的名字</span></span>
+      <a href="docs/DEPLOYMENT.md">部署说明</a>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>

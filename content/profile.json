@@ -1,0 +1,28 @@
+{
+  "name": "你的名字",
+  "role": "个人网站 / 项目档案",
+  "location": "中国 / 可远程协作",
+  "focus": "软件开发、AI 应用、数据项目",
+  "status": "持续更新作品集",
+  "summary": "这里可以放你的个人介绍、作品集、项目复盘、论文/文章和联系方式。先部署到 GitHub Pages，之后绑定个人域名。",
+  "about": [
+    "这里是你的个人介绍。建议写清楚你是谁、正在做什么、擅长什么、希望别人如何与你合作。",
+    "你可以把更完整的经历、技能栈、教育背景或工作经历继续拆到 content 目录下维护。"
+  ],
+  "contacts": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-github-name"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:your-email@example.com"
+    }
+  ],
+  "notes": [
+    {
+      "date": "2026-04-29",
+      "text": "创建个人网站初版结构，支持 GitHub Pages 部署。"
+    }
+  ]
+}

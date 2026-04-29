@@ -1,0 +1,44 @@
+[
+  {
+    "title": "项目名称示例",
+    "type": "Web",
+    "status": "building",
+    "featured": true,
+    "summary": "用两三句话说明项目解决了什么问题、你的职责是什么、最终产出是什么。",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "links": [
+      {
+        "label": "代码",
+        "url": "https://github.com/your-github-name/project"
+      }
+    ]
+  },
+  {
+    "title": "AI 应用示例",
+    "type": "AI",
+    "status": "live",
+    "featured": false,
+    "summary": "说明模型、数据、交互流程、部署方式和你负责的关键模块。",
+    "tags": ["Python", "API", "Product"],
+    "links": [
+      {
+        "label": "说明",
+        "url": "https://github.com/your-github-name"
+      }
+    ]
+  },
+  {
+    "title": "数据分析示例",
+    "type": "Data",
+    "status": "archived",
+    "featured": false,
+    "summary": "说明数据来源、分析方法、可视化结果和项目带来的结论。",
+    "tags": ["Notebook", "Chart", "Report"],
+    "links": [
+      {
+        "label": "报告",
+        "url": "https://github.com/your-github-name"
+      }
+    ]
+  }
+]
