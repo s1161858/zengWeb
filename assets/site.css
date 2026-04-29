@@ -330,9 +330,9 @@ dd {
 
 h1 {
   max-width: 100%;
-  margin: 0;
+  margin: 0 0 0.35rem;
   font-size: clamp(3.4rem, 7.2vw, 6.8rem);
-  line-height: 1.16;
+  line-height: 1.22;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -344,8 +344,8 @@ h1 {
   background-clip: text;
   color: transparent;
   font-weight: 850;
-  line-height: 1.16;
-  padding: 0.04em 0 0.16em;
+  line-height: 1.22;
+  padding: 0.04em 0 0.24em;
   text-shadow: 0 28px 70px rgba(88, 166, 255, 0.18);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -378,7 +378,7 @@ h1 {
 .title-line {
   display: block;
   max-width: 24ch;
-  margin: 1.2rem 0 0;
+  margin: 1.65rem 0 0;
   color: #dce7f6;
   font-size: clamp(1.2rem, 2.05vw, 1.85rem);
   font-weight: 760;
