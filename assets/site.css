@@ -286,7 +286,29 @@ main {
 }
 
 .hero-copy {
-  padding: clamp(0.5rem, 3vw, 2rem);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+
+.hero-copy::before,
+.hero-copy::after {
+  display: block;
+  width: min(18rem, 55%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.48), transparent);
+  content: "";
+}
+
+.hero-copy::before {
+  margin-bottom: clamp(1.25rem, 4vw, 3rem);
+}
+
+.hero-copy::after {
+  margin-top: clamp(1.4rem, 4vw, 3.2rem);
 }
 
 .eyebrow {
@@ -309,28 +331,64 @@ dd {
 h1 {
   max-width: 100%;
   margin: 0;
-  font-size: clamp(4.25rem, 8vw, 7.9rem);
-  line-height: 0.88;
+  font-size: clamp(3.4rem, 7.2vw, 6.8rem);
+  line-height: 0.96;
   letter-spacing: 0;
   white-space: nowrap;
 }
 
+.hero-name {
+  display: inline-block;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #dbeafe 42%, #8cbcff 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 850;
+  text-shadow: 0 28px 70px rgba(88, 166, 255, 0.18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-kicker {
+  display: flex;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.05rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  padding: 0.28rem;
+}
+
+.hero-kicker span {
+  border-radius: 999px;
+  padding: 0.32rem 0.68rem;
+  color: #dbeafe;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.hero-kicker span:first-child {
+  background: rgba(88, 166, 255, 0.18);
+}
+
 .title-line {
   display: block;
-  max-width: 21ch;
-  margin-top: 1.1rem;
+  max-width: 24ch;
+  margin: 1.2rem 0 0;
   color: #dce7f6;
-  font-size: clamp(1.35rem, 2.4vw, 2.25rem);
+  font-size: clamp(1.2rem, 2.05vw, 1.85rem);
   font-weight: 760;
-  line-height: 1.12;
+  line-height: 1.18;
   white-space: normal;
 }
 
 .hero-summary {
-  max-width: 50rem;
-  margin: 1.45rem 0 0;
+  max-width: 42rem;
+  margin: 1.2rem 0 0;
   color: var(--muted);
-  font-size: 1.06rem;
+  font-size: 1rem;
 }
 
 .hero-tags,
@@ -896,8 +954,13 @@ h2 {
   }
 
   h1 {
-    font-size: clamp(3.35rem, 17vw, 5.2rem);
+    font-size: clamp(3rem, 16vw, 5rem);
     white-space: nowrap;
+  }
+
+  .hero-copy::before,
+  .hero-copy::after {
+    width: 80%;
   }
 
   .activity-grid {
