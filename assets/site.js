@@ -1,8 +1,8 @@
 const fallbackProfile = {
   name: "ZENG Chen bo",
-  englishName: "Magcial",
+  englishName: "Magical",
   role: "AI Application Developer / Large Model Engineer",
-  location: "Tai Po District, Hong Kong",
+  location: "Hong Kong / ShenZhen",
   focus: "LLM Fine-tuning · RAG · Multimodal AI",
   status: "Open to AI engineering and research collaboration",
   summary:
@@ -226,19 +226,66 @@ function renderProjects(projects, filter = "All") {
 
 function renderActivityGrid(projects) {
   const grid = document.querySelector("#activity-grid");
+  const detail = document.querySelector("#activity-detail");
   grid.innerHTML = "";
-  const source = projects.length ? projects : [{ featured: true }, { featured: false }];
-  const weights = source.flatMap((project, index) => {
-    const base = project.featured ? 4 : 2;
-    return [base, Math.max(1, base - 1), (index % 4) + 1];
-  });
+  const source = projects.length ? projects : [{ title: "AI portfolio", type: "AI", status: "building", featured: true }];
+
+  function setDetail(project) {
+    detail.replaceChildren();
+    const meta = document.createElement("span");
+    const title = document.createElement("strong");
+    const summary = document.createElement("p");
+    meta.textContent = `${project.type || "Project"} · ${project.status || "active"}`;
+    title.textContent = project.title || "AI portfolio";
+    summary.textContent = project.summary || "Interactive preview for current project work.";
+    detail.append(meta, title, summary);
+  }
+
+  setDetail(source[0]);
 
   Array.from({ length: 84 }).forEach((_, index) => {
-    const cell = document.createElement("span");
-    const weight = weights[index % weights.length] || 1;
-    cell.dataset.level = String((weight + index) % 5);
+    const project = source[index % source.length];
+    const cell = document.createElement("button");
+    const base = project.featured ? 4 : 2;
+    const level = (base + index + (project.type || "").length) % 5;
+    cell.type = "button";
+    cell.dataset.level = String(level);
+    cell.dataset.project = project.title || "Project";
+    cell.ariaLabel = `Preview ${project.title || "project"}`;
+    cell.addEventListener("pointerenter", () => setDetail(project));
+    cell.addEventListener("focus", () => setDetail(project));
     grid.append(cell);
   });
+}
+
+function setupRevealAnimations() {
+  const targets = document.querySelectorAll(
+    ".section, .skill-tile, .project-card, .timeline-item, .contact-links a"
+  );
+
+  targets.forEach((target, index) => {
+    target.classList.add("reveal");
+    target.style.setProperty("--delay", `${Math.min(index % 8, 6) * 55}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((target) => target.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  targets.forEach((target) => observer.observe(target));
 }
 
 function setupCommandPalette() {
@@ -342,6 +389,7 @@ async function init() {
   renderFilters(projects, (type) => renderProjects(projects, type));
   renderProjects(projects);
   renderActivityGrid(projects);
+  setupRevealAnimations();
   setupCommandPalette();
   setupCanvas();
   document.querySelector("#year").textContent = new Date().getFullYear();

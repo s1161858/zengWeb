@@ -430,35 +430,84 @@ h1 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0.28rem;
-  margin: 1.35rem 0;
+  margin: 1.35rem 0 0.85rem;
 }
 
-.activity-grid span {
+.activity-grid button {
   aspect-ratio: 1;
+  border: 1px solid transparent;
   border-radius: 3px;
   background: rgba(148, 163, 184, 0.12);
+  cursor: pointer;
+  padding: 0;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
 }
 
-.activity-grid span[data-level="1"] {
+.activity-grid button[data-level="1"] {
   background: rgba(63, 185, 80, 0.28);
 }
 
-.activity-grid span[data-level="2"] {
+.activity-grid button[data-level="2"] {
   background: rgba(63, 185, 80, 0.44);
 }
 
-.activity-grid span[data-level="3"] {
+.activity-grid button[data-level="3"] {
   background: rgba(63, 185, 80, 0.68);
 }
 
-.activity-grid span[data-level="4"] {
+.activity-grid button[data-level="4"] {
   background: rgba(155, 233, 168, 0.86);
+}
+
+.activity-grid button:hover,
+.activity-grid button:focus-visible {
+  border-color: rgba(255, 255, 255, 0.72);
+  box-shadow:
+    0 0 0 3px rgba(88, 166, 255, 0.16),
+    0 0 22px rgba(155, 233, 168, 0.28);
+  outline: 0;
+  transform: translateY(-2px) scale(1.25);
+}
+
+.activity-detail {
+  min-height: 8.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(88, 166, 255, 0.13), transparent 44%),
+    rgba(255, 255, 255, 0.045);
+  padding: 0.85rem;
+}
+
+.activity-detail span {
+  display: block;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.activity-detail strong {
+  margin-top: 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.activity-detail p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .metrics {
   display: grid;
   gap: 0.7rem;
-  margin: 0;
+  margin: 0.9rem 0 0;
 }
 
 .metrics div {
@@ -759,6 +808,22 @@ h2 {
   font-weight: 760;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.985);
+  transition:
+    opacity 620ms ease,
+    transform 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 180ms ease,
+    background 180ms ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 @media (max-width: 1080px) {
   .hero {
     grid-template-columns: 230px minmax(0, 1fr);
@@ -841,5 +906,10 @@ h2 {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
