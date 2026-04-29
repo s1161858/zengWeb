@@ -22,24 +22,28 @@
         </span>
       </a>
       <nav class="site-nav" aria-label="主导航">
-        <a href="#projects">项目</a>
-        <a href="#experience">经历</a>
-        <a href="#stack">能力</a>
-        <a href="#contact">联系</a>
+        <a href="#projects" data-i18n="nav.projects">项目</a>
+        <a href="#experience" data-i18n="nav.experience">经历</a>
+        <a href="#stack" data-i18n="nav.stack">能力</a>
+        <a href="#contact" data-i18n="nav.contact">联系</a>
       </nav>
+      <div class="language-switch" aria-label="Language switch">
+        <button type="button" data-lang="zh-CN">简</button>
+        <button type="button" data-lang="zh-TW">繁</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
       <button class="nav-command" type="button" data-open-command aria-label="打开快速导航">⌘K</button>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <aside class="profile-card" aria-label="个人资料">
-          <div class="avatar" aria-hidden="true">M</div>
           <p class="profile-name" data-profile="name">ZENG Chen bo</p>
           <p class="profile-realname" data-profile="englishName">Magical</p>
           <p class="profile-role" data-profile="role">AI Application Developer / Large Model Engineer</p>
           <dl class="profile-facts">
             <div>
-              <dt>Location</dt>
+              <dt data-i18n="label.location">Location</dt>
               <dd data-profile="location">Hong Kong / ShenZhen</dd>
             </div>
             <div>
@@ -55,10 +59,10 @@
         </aside>
 
         <div class="hero-copy">
-          <p class="eyebrow">Portfolio / AI Engineering</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio / AI Engineering</p>
           <h1 id="hero-title">
             <span data-profile="englishName">Magical</span>
-            <span class="title-line">Building multimodal AI agents, RAG systems and product-ready teaching platforms.</span>
+            <span class="title-line" data-i18n="hero.titleLine">Building multimodal AI agents, RAG systems and product-ready teaching platforms.</span>
           </h1>
           <p class="hero-summary" data-profile="summary">
             MSc AI student at The Education University of Hong Kong, focused on LLM fine-tuning,
@@ -71,8 +75,8 @@
             <span>Robotics</span>
           </div>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">查看项目</a>
-            <a class="button secondary" href="assets/documents/CV-ZENG-Chen-bo.pdf" target="_blank" rel="noreferrer">查看简历</a>
+            <a class="button primary" href="#projects" data-i18n="button.projects">查看项目</a>
+            <a class="button secondary" href="assets/documents/CV-ZENG-Chen-bo.pdf" target="_blank" rel="noreferrer" data-i18n="button.resume">查看简历</a>
           </div>
         </div>
 
@@ -82,26 +86,26 @@
             <span></span>
             <span></span>
           </div>
-          <p class="screen-label">Current Focus</p>
+          <p class="screen-label" data-i18n="label.currentFocus">Current Focus</p>
           <strong data-profile="focus">LLM Fine-tuning · RAG · Multimodal AI</strong>
           <span class="status-line" data-profile="status">Open to AI engineering and research collaboration</span>
           <div class="activity-grid" id="activity-grid" aria-label="项目互动矩阵"></div>
           <div class="activity-detail" id="activity-detail" aria-live="polite">
-            <span>Hover project nodes</span>
-            <strong>Explore my AI work</strong>
-            <p>Move across the matrix to preview projects, focus areas and current status.</p>
+            <span data-i18n="activity.meta">Hover project nodes</span>
+            <strong data-i18n="activity.title">Explore my AI work</strong>
+            <p data-i18n="activity.text">Move across the matrix to preview projects, focus areas and current status.</p>
           </div>
           <dl class="metrics">
             <div>
-              <dt>Education</dt>
+              <dt data-i18n="metric.education">Education</dt>
               <dd>EdUHK MSc AI</dd>
             </div>
             <div>
-              <dt>Award</dt>
+              <dt data-i18n="metric.award">Award</dt>
               <dd>Huawei ICT AI #1 HK</dd>
             </div>
             <div>
-              <dt>Projects</dt>
+              <dt data-i18n="metric.projects">Projects</dt>
               <dd id="project-count">0+</dd>
             </div>
           </dl>
@@ -110,17 +114,17 @@
 
       <section class="section compact" id="stack" aria-labelledby="stack-title">
         <div class="section-head">
-          <p class="eyebrow">Capability Map</p>
-          <h2 id="stack-title">把模型、数据和产品链路接起来</h2>
+          <p class="eyebrow" data-i18n="stack.eyebrow">Capability Map</p>
+          <h2 id="stack-title" data-i18n="stack.title">把模型、数据和产品链路接起来</h2>
         </div>
         <div class="stack-grid" id="skill-grid"></div>
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="section-head">
-          <p class="eyebrow">Selected Projects</p>
-          <h2 id="projects-title">项目作品集</h2>
-          <p>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Selected Projects</p>
+          <h2 id="projects-title" data-i18n="projects.title">项目作品集</h2>
+          <p data-i18n-html="projects.text">
             项目资料可以放在 <code>projects/项目英文名/</code>，展示文字统一维护在
             <code>content/projects.json</code>。
           </p>
@@ -131,25 +135,25 @@
 
       <section class="section split" id="experience" aria-labelledby="experience-title">
         <div>
-          <p class="eyebrow">Experience</p>
-          <h2 id="experience-title">教育与经历</h2>
+          <p class="eyebrow" data-i18n="experience.eyebrow">Experience</p>
+          <h2 id="experience-title" data-i18n="experience.title">教育与经历</h2>
         </div>
         <div class="timeline" id="experience-list"></div>
       </section>
 
       <section class="section split" id="about" aria-labelledby="about-title">
         <div>
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">关于我</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+          <h2 id="about-title" data-i18n="about.title">关于我</h2>
         </div>
         <div class="rich-text" id="about-content"></div>
       </section>
 
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">联系与资料</h2>
-          <p>后续如果你购买个人域名，按 <code>docs/CUSTOM_DOMAIN.md</code> 添加 CNAME 和 DNS 记录。</p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 id="contact-title" data-i18n="contact.title">联系与资料</h2>
+          <p data-i18n-html="contact.text">后续如果你购买个人域名，按 <code>docs/CUSTOM_DOMAIN.md</code> 添加 CNAME 和 DNS 记录。</p>
         </div>
         <div class="contact-links" id="contact-links"></div>
       </section>
@@ -158,21 +162,21 @@
     <div class="command-overlay" id="command-overlay" hidden>
       <div class="command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-title">
         <div class="command-top">
-          <h2 id="command-title">快速导航</h2>
+          <h2 id="command-title" data-i18n="command.title">快速导航</h2>
           <button type="button" data-close-command aria-label="关闭快速导航">×</button>
         </div>
         <div class="command-list">
-          <a href="#projects">查看项目</a>
-          <a href="#experience">查看经历</a>
-          <a href="#stack">查看能力</a>
-          <a href="assets/documents/CV-ZENG-Chen-bo.pdf" target="_blank" rel="noreferrer">打开简历 PDF</a>
+          <a href="#projects" data-i18n="command.projects">查看项目</a>
+          <a href="#experience" data-i18n="command.experience">查看经历</a>
+          <a href="#stack" data-i18n="command.stack">查看能力</a>
+          <a href="assets/documents/CV-ZENG-Chen-bo.pdf" target="_blank" rel="noreferrer" data-i18n="command.resume">打开简历 PDF</a>
         </div>
       </div>
     </div>
 
     <footer class="site-footer">
       <span>© <span id="year"></span> <span data-profile="name">ZENG Chen bo</span></span>
-      <a href="docs/DEPLOYMENT.md">部署说明</a>
+      <a href="docs/DEPLOYMENT.md" data-i18n="footer.deploy">部署说明</a>
     </footer>
 
     <script src="assets/site.js" defer></script>

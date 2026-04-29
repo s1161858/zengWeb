@@ -73,6 +73,139 @@ const fallbackProfile = {
 };
 
 const fallbackProjects = [];
+const languageNames = {
+  "zh-CN": "简",
+  "zh-TW": "繁",
+  en: "EN"
+};
+
+const translations = {
+  "zh-CN": {
+    "nav.projects": "项目",
+    "nav.experience": "经历",
+    "nav.stack": "能力",
+    "nav.contact": "联系",
+    "label.location": "Location",
+    "label.currentFocus": "Current Focus",
+    "hero.eyebrow": "Portfolio / AI Engineering",
+    "hero.titleLine": "Building multimodal AI agents, RAG systems and product-ready teaching platforms.",
+    "button.projects": "查看项目",
+    "button.resume": "查看简历",
+    "activity.meta": "Hover project nodes",
+    "activity.title": "Explore my AI work",
+    "activity.text": "Move across the matrix to preview projects, focus areas and current status.",
+    "metric.education": "Education",
+    "metric.award": "Award",
+    "metric.projects": "Projects",
+    "stack.eyebrow": "Capability Map",
+    "stack.title": "把模型、数据和产品链路接起来",
+    "projects.eyebrow": "Selected Projects",
+    "projects.title": "项目作品集",
+    "projects.text": "项目资料可以放在 <code>projects/项目英文名/</code>，展示文字统一维护在 <code>content/projects.json</code>。",
+    "experience.eyebrow": "Experience",
+    "experience.title": "教育与经历",
+    "about.eyebrow": "About",
+    "about.title": "关于我",
+    "contact.eyebrow": "Contact",
+    "contact.title": "联系与资料",
+    "contact.text": "后续如果你购买个人域名，按 <code>docs/CUSTOM_DOMAIN.md</code> 添加 CNAME 和 DNS 记录。",
+    "command.title": "快速导航",
+    "command.projects": "查看项目",
+    "command.experience": "查看经历",
+    "command.stack": "查看能力",
+    "command.resume": "打开简历 PDF",
+    "footer.deploy": "部署说明",
+    role: "AI Application Developer / Large Model Engineer",
+    summary:
+      "香港教育大学人工智能硕士学生，专注 LLM 微调、多模态教学智能体、RAG 系统、语音 AI 与机器人交互平台。",
+    focus: "LLM Fine-tuning · RAG · Multimodal AI",
+    status: "Open to AI engineering and research collaboration"
+  },
+  "zh-TW": {
+    "nav.projects": "專案",
+    "nav.experience": "經歷",
+    "nav.stack": "能力",
+    "nav.contact": "聯絡",
+    "label.location": "Location",
+    "label.currentFocus": "Current Focus",
+    "hero.eyebrow": "Portfolio / AI Engineering",
+    "hero.titleLine": "Building multimodal AI agents, RAG systems and product-ready teaching platforms.",
+    "button.projects": "查看專案",
+    "button.resume": "查看履歷",
+    "activity.meta": "Hover project nodes",
+    "activity.title": "Explore my AI work",
+    "activity.text": "Move across the matrix to preview projects, focus areas and current status.",
+    "metric.education": "Education",
+    "metric.award": "Award",
+    "metric.projects": "Projects",
+    "stack.eyebrow": "Capability Map",
+    "stack.title": "把模型、資料和產品鏈路接起來",
+    "projects.eyebrow": "Selected Projects",
+    "projects.title": "專案作品集",
+    "projects.text": "專案資料可以放在 <code>projects/專案英文名/</code>，展示文字統一維護在 <code>content/projects.json</code>。",
+    "experience.eyebrow": "Experience",
+    "experience.title": "教育與經歷",
+    "about.eyebrow": "About",
+    "about.title": "關於我",
+    "contact.eyebrow": "Contact",
+    "contact.title": "聯絡與資料",
+    "contact.text": "後續如果你購買個人網域，按 <code>docs/CUSTOM_DOMAIN.md</code> 添加 CNAME 和 DNS 記錄。",
+    "command.title": "快速導航",
+    "command.projects": "查看專案",
+    "command.experience": "查看經歷",
+    "command.stack": "查看能力",
+    "command.resume": "打開履歷 PDF",
+    "footer.deploy": "部署說明",
+    role: "AI Application Developer / Large Model Engineer",
+    summary:
+      "香港教育大學人工智慧碩士學生，專注 LLM 微調、多模態教學智能體、RAG 系統、語音 AI 與機器人互動平台。",
+    focus: "LLM Fine-tuning · RAG · Multimodal AI",
+    status: "Open to AI engineering and research collaboration"
+  },
+  en: {
+    "nav.projects": "Projects",
+    "nav.experience": "Experience",
+    "nav.stack": "Skills",
+    "nav.contact": "Contact",
+    "label.location": "Location",
+    "label.currentFocus": "Current Focus",
+    "hero.eyebrow": "Portfolio / AI Engineering",
+    "hero.titleLine": "Building multimodal AI agents, RAG systems and product-ready teaching platforms.",
+    "button.projects": "View Projects",
+    "button.resume": "View Resume",
+    "activity.meta": "Hover project nodes",
+    "activity.title": "Explore my AI work",
+    "activity.text": "Move across the matrix to preview projects, focus areas and current status.",
+    "metric.education": "Education",
+    "metric.award": "Award",
+    "metric.projects": "Projects",
+    "stack.eyebrow": "Capability Map",
+    "stack.title": "Connecting models, data and product workflows",
+    "projects.eyebrow": "Selected Projects",
+    "projects.title": "Project Portfolio",
+    "projects.text": "Project assets live in <code>projects/project-name/</code>, while card text is maintained in <code>content/projects.json</code>.",
+    "experience.eyebrow": "Experience",
+    "experience.title": "Education & Experience",
+    "about.eyebrow": "About",
+    "about.title": "About Me",
+    "contact.eyebrow": "Contact",
+    "contact.title": "Contact & Materials",
+    "contact.text": "When you buy a personal domain, follow <code>docs/CUSTOM_DOMAIN.md</code> to add CNAME and DNS records.",
+    "command.title": "Quick Navigation",
+    "command.projects": "View Projects",
+    "command.experience": "View Experience",
+    "command.stack": "View Skills",
+    "command.resume": "Open Resume PDF",
+    "footer.deploy": "Deployment Guide",
+    role: "AI Application Developer / Large Model Engineer",
+    summary:
+      "MSc AI student at The Education University of Hong Kong, focused on LLM fine-tuning, multimodal teaching agents, RAG systems, speech AI and robot interaction platforms.",
+    focus: "LLM Fine-tuning · RAG · Multimodal AI",
+    status: "Open to AI engineering and research collaboration"
+  }
+};
+
+let currentLanguage = localStorage.getItem("site-language") || "zh-CN";
 
 async function loadJson(path, fallback) {
   try {
@@ -153,7 +286,8 @@ function renderExperience(profile) {
 }
 
 function projectTypes(projects) {
-  return ["All", ...Array.from(new Set(projects.map((project) => project.type).filter(Boolean)))];
+  const allLabel = currentLanguage === "en" ? "All" : currentLanguage === "zh-TW" ? "全部" : "全部";
+  return [allLabel, ...Array.from(new Set(projects.map((project) => project.type).filter(Boolean)))];
 }
 
 function renderFilters(projects, onFilter) {
@@ -167,7 +301,7 @@ function renderFilters(projects, onFilter) {
     button.addEventListener("click", () => {
       filterBar.querySelectorAll("button").forEach((node) => node.classList.remove("active"));
       button.classList.add("active");
-      onFilter(type);
+      onFilter(index === 0 ? "All" : type);
     });
     filterBar.append(button);
   });
@@ -222,6 +356,52 @@ function renderProjects(projects, filter = "All") {
   });
 
   document.querySelector("#project-count").textContent = `${projects.length}+`;
+}
+
+function applyLanguage(language) {
+  currentLanguage = translations[language] ? language : "zh-CN";
+  const copy = translations[currentLanguage];
+  document.documentElement.lang = currentLanguage;
+  localStorage.setItem("site-language", currentLanguage);
+
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    const key = node.dataset.i18n;
+    if (copy[key]) node.textContent = copy[key];
+  });
+
+  document.querySelectorAll("[data-i18n-html]").forEach((node) => {
+    const key = node.dataset.i18nHtml;
+    if (copy[key]) node.innerHTML = copy[key];
+  });
+
+  [
+    ["role", copy.role],
+    ["summary", copy.summary],
+    ["focus", copy.focus],
+    ["status", copy.status]
+  ].forEach(([key, value]) => {
+    document.querySelectorAll(`[data-profile="${key}"]`).forEach((node) => {
+      node.textContent = value;
+    });
+  });
+
+  document.querySelectorAll(".language-switch button").forEach((button) => {
+    const active = button.dataset.lang === currentLanguage;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+    button.textContent = languageNames[button.dataset.lang];
+  });
+}
+
+function setupLanguageSwitch(projects) {
+  document.querySelectorAll(".language-switch button").forEach((button) => {
+    button.addEventListener("click", () => {
+      applyLanguage(button.dataset.lang);
+      renderFilters(projects, (type) => renderProjects(projects, type));
+      renderProjects(projects);
+    });
+  });
+  applyLanguage(currentLanguage);
 }
 
 function renderActivityGrid(projects) {
@@ -390,6 +570,7 @@ async function init() {
   renderProjects(projects);
   renderActivityGrid(projects);
   setupRevealAnimations();
+  setupLanguageSwitch(projects);
   setupCommandPalette();
   setupCanvas();
   document.querySelector("#year").textContent = new Date().getFullYear();
