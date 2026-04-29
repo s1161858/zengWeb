@@ -196,7 +196,7 @@ main {
   display: grid;
   min-height: calc(100vh - 68px);
   grid-template-columns: 260px minmax(0, 1fr) 340px;
-  align-items: center;
+  align-items: stretch;
   gap: 1rem;
   padding: clamp(2rem, 5vw, 5rem) 0 clamp(2rem, 4vw, 4rem);
 }
@@ -290,8 +290,8 @@ main {
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: clamp(1rem, 4vw, 3rem);
+  justify-content: flex-start;
+  padding: 1rem clamp(1rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
 }
 
 .hero-copy::before,
@@ -304,7 +304,7 @@ main {
 }
 
 .hero-copy::before {
-  margin-bottom: clamp(1.25rem, 4vw, 3rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
 }
 
 .hero-copy::after {
